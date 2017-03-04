@@ -1,13 +1,13 @@
 package prj
 
 import (
-	. "github.com/franela/goblin"
-	"testing"
-	"math"
+    . "github.com/franela/goblin"
+    "testing"
+    "math"
 )
 
 func TestCart(t *testing.T) {
-	g := Goblin(t)
+    g := Goblin(t)
 
 	g.Describe("geom.point", func() {
 		g.It("x, y access & null", func() {
@@ -19,5 +19,5 @@ func TestCart(t *testing.T) {
 			g.Assert(math.Abs(y - 4985455.69596696) < 1.0e-8).IsTrue()
 		})
 
-	})
+    })
 }
