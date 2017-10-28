@@ -1,4 +1,4 @@
 sandbox/
 .idea/
-.iml
-
+*.iml
+sandbox/
