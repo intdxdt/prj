@@ -1,9 +1,9 @@
 package prj
 
 import (
-    "github.com/franela/goblin"
-    "testing"
     "math"
+    "testing"
+    "github.com/franela/goblin"
 )
 
 func TestCart(t *testing.T) {

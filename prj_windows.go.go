@@ -23,13 +23,13 @@ func Transform(frm, to int, coords [][]float64, fromGeog ...bool) [][]float64 {
 	}
 
 	cmd := getCmdPath()
-	coord_args, err := json.Marshal(coords)
+	coordArgs, err := json.Marshal(coords)
 	checkErr(err)
 
 	args := []string{
 		"-f", fmt.Sprintf("%v", frm),
 		"-t", fmt.Sprintf("%v", to),
-		"-i", string(coord_args),
+		"-i", string(coordArgs),
 	}
 
 	out, err := exec.Command(cmd, args...).Output()
