@@ -12,12 +12,12 @@ func Transform(frm, to int, coords [][]float64, fromGeog ...bool) [][]float64 {
 		}
 	}
 
-	frmprj4, ok := srsDB[frm]
+	frmPrj4, ok := srsDB[frm]
 	if !ok {
 		log.Fatalln("src srs not found")
 	}
 
-	srcPrj, err := proj.NewProj(frmprj4)
+	srcPrj, err := proj.NewProj(frmPrj4)
 	defer srcPrj.Close()
 	checkErr(err)
 
